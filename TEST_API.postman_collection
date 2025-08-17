@@ -1,13 +1,13 @@
 {
 	"info": {
 		"_postman_id": "af49f168-e8ca-4cfe-b26f-c67f930ac255",
-		"name": "Сервер API",
+		"name": "Сервер API 1.2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "27073361"
 	},
 	"item": [
 		{
-			"name": "Получение токена USER",
+			"name": "Получение токена USER1",
 			"event": [
 				{
 					"listen": "test",
@@ -72,7 +72,7 @@
 			"response": []
 		},
 		{
-			"name": "Получение списка пользователей",
+			"name": "Получение списка пользователей нашего API",
 			"event": [
 				{
 					"listen": "test",
