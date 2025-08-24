@@ -1,0 +1,193 @@
+/* Основные стили */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body, html {
+font-family: Arial, sans-serif;
+background-color: #f0f8ff; /* Основной цвет фона */
+color: #333;
+line-height: 1.6;
+min-height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+overflow-x: hidden;
+/* Добавление градиента для боков /
+background: linear-gradient(to left, #1e90ff 10%, transparent 90%),
+linear-gradient(to right, #1e90ff 10%, transparent 90%);
+background-attachment: fixed; / Фон не прокручивается /
+padding-left: 15px; / Немного отступа слева /
+padding-right: 15px; / Немного отступа справа /
+}
+/ Заголовок */
+header {
+background-color: #1e90ff;
+color: white;
+padding: 20px 0;
+text-align: center;
+width: 100%;
+}/* Навигационное меню /
+header nav ul {
+
+list-style: none;
+display: flex; / Горизонтальное размещение ссылок /
+justify-content: center; / Центрируем ссылки /
+gap: 20px; / Отступ между ссылками */
+}header nav a {
+color: white;
+text-decoration: none;
+font-size: 18px;
+transition: color 0.3s;
+}header nav a:hover {
+color: #ff6347; /* Цвет ссылок при наведении /
+}
+/ Фон за блоками (голубой) /
+.main-content {
+background-color: #1e90ff; / Голубой фон /
+width: 100%;
+padding: 40px 0; / Добавим отступы сверху и снизу */
+}/* Блоки с контентом (Обо мне, Мои ссылки) /
+section {
+padding: 40px 20px;
+margin: 20px auto;
+width: 80%;
+max-width: 800px;
+background-color: white; / Белые блоки /
+color: #333; / Черный текст внутри белых блоков */
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+}/* Заголовок блока */
+section h2 {
+font-size: 24px;
+margin-bottom: 10px;
+color: #1e90ff;
+}section p {
+font-size: 18px;
+}ul {
+list-style: none;
+padding: 0;
+}li a {
+color: white; /* Белые ссылки в блоке "Обо мне" /
+text-decoration: none;
+font-size: 18px;
+margin-top: 10px;
+display: block; / Делаем ссылки блочными, чтобы они не сливались с текстом */
+}li a:hover {
+color: #ff6347; /* Цвет ссылок при наведении */
+}/* Ссылки в блоке "Мои ссылки" /
+.white-links li a {
+color: #1e90ff; / Синие ссылки в блоке "Мои ссылки" */
+text-decoration: none;
+}.white-links li a:hover {
+color: #ff6347; /* Цвет ссылок при наведении в блоке "Мои ссылки" */
+}/* Контейнер с фоном за кнопкой /
+.button-container {
+background-color: #1e90ff; / Синий фон /
+padding: 5px; / Добавляем немного отступа для кнопки /
+display: block; / Теперь контейнер растягивается на всю ширину /
+width: 100%; / Фон будет растягиваться на всю ширину /
+text-align: center; / Центрируем кнопку /
+margin: 0 auto; / Центрируем контейнер */
+}/* Кнопка с белой обводкой /
+button {
+padding: 10px 20px;
+background-color: white; / Белый фон для кнопки /
+
+color: #1e90ff; / Синий текст /
+border: 2px solid white; / Белая обводка /
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+display: inline-block; / Кнопка теперь будет внутри контейнера /
+width: 83%; / Кнопка растягивается на всю ширину контейнера */
+}button:hover {
+background-color: #4169e1; /* Темный синий фон при наведении /
+border-color: white; / Изменение обводки при наведении /
+transform: scale(1.05); / Немного увеличиваем кнопку при наведении */
+}/* Стили для изображения /
+.profile-img {
+width: 200px;
+height: 300px;
+border-radius: 15px;
+margin-top: 20px;
+object-fit: cover; / Обрезаем изображение, чтобы оно не растягивалось */
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}.profile-img:hover {
+transform: scale(1.1); /* Увеличиваем изображение при наведении /
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); / Добавляем тень */
+}/* Контейнер для иконок /
+.icon-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none; / Чтобы иконки не мешали взаимодействовать с другими
+элементами */
+z-index: 9999;
+}/* Падение иконок /
+.icon {
+position: absolute;
+top: -50px; / Иконки начинают сверху /
+font-size: 24px;
+color: white;
+animation: fall 5s infinite linear; / Плавное падение */
+opacity: 0.8;
+}/* Анимация падения иконок /
+@keyframes fall {
+0% {
+top: -50px; / Начинаем падение за экраном /
+opacity: 0.8;
+}
+100% {
+top: 100vh; / Иконка падает до низа экрана /
+opacity: 0.2; / Иконка становится более прозрачной */
+}
+}footer {
+background-color:#1e90ff;
+color: white;
+text-align: center;
+padding: 20px 0;
+width: 100%;
+}footer a {
+color:blue;
+margin: 0 10px;
+font-size: 20px;
+transition: color 0.3s;
+}footer a:hover {
+color: blue;
+
+}
+/* Модальное окно */
+.hidden {
+display: none;
+}#modal {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}.modal-content {
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+width: 300px;
+text-align: center;
+}#closeModal {
+cursor: pointer;
+font-size: 24px;
+position: absolute;
+top: 10px;
+right: 10px;
+color: #1e90ff;
+}
